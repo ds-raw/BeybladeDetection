@@ -98,4 +98,32 @@ Once everything is set up:
   - Images of the winner 🏆 and loser ❌
   - The battle data in a CSV file 📈
 - Local Files: A CSV file (battle_result.csv) and images will be saved in the project folder.
+## 📊 Model Summary Results:
+- Model Architecture:
+  - Layers: 168
+  - Parameters: 11,126,358
+  - Gradients: 0
+  - GFLOPs: 28.4
+- Overall Performance:
+  - Total Images: 39
+  - Total Instances: 78
+  - Box Precision (P): 0.944
+  - Recall (R): 0.864
+  - Mean Average Precision at IoU=0.50 (mAP50): 0.936
+  - Mean Average Precision at IoU=0.50 to 0.95 (mAP50-95): 0.69
+- Class-Specific Performance:
+  - Beyblade:
+    - Images: 35
+    - Instances: 67
+    - Precision: 1.000
+    - Recall: 1.000
+    - mAP50: 0.995
+    - mAP50-95: 0.879
+   - Hand:
+     - Images: 7
+     - Instances: 11
+     - Precision: 0.888
+     - Recall: 0.727
+     - mAP50: 0.876
+     - mAP50-95: 0.500
 
