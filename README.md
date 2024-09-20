@@ -15,7 +15,7 @@ This Python script is designed to analyze Beyblade battles from a video using th
    The battle ends when one Beyblade stops spinning. The script captures the moment, stores battle details (winner, loser, and duration), and saves images of the final result.
 6. Telegram Bot Integration 🤖:
    After the battle, the results (including a CSV file, summary, and images of the winner and loser) are automatically sent via a Telegram bot to a specified chat.
-
+   
 ## ✨ Key Features:
 - Object Detection with YOLOv8: Automatically detects Beyblades in real-time 🎯.
 - Collision Detection: Counts the number of collisions during the battle ⚔️.
@@ -55,16 +55,47 @@ Before diving in, make sure you have the following installed:
 
 ## 📥 Setup Guide
 1. Upload Your Dataset to Roboflow 📤:
-   Create a Roboflow account and log in.
-2. Upload your Beyblade images or video frames to create a new project.
-3. Annotate the Dataset Using Roboflow ✏️:
+   - Create a Roboflow account and log in.
+   - Upload your Beyblade images or video frames to create a new project.
+2. Annotate the Dataset Using Roboflow ✏️:
    - Use the annotation tools provided by Roboflow to label your Beyblade objects (e.g., "Beyblade").
    - Once done, save your annotations.
-4. Download the Annotated Dataset 📥:
+3. Download the Annotated Dataset 📥:
    - After annotation, download the dataset in the YOLO format.
    - This will typically include your images and a corresponding set of annotation files.
-5. Train the Dataset 🏋️‍♂️:
+4. Train the Dataset 🏋️‍♂️:
    - Use the downloaded dataset to train your YOLOv8 model.
    - Follow the specific training instructions from the YOLO documentation or Roboflow to create your custom model.
-6. Clone the Repository:
-   Download the project files: 
+5. Clone the Repository:
+   - Download the project files:
+   - git clone https://github.com/your-username/your-repository-name.git
+   - cd your-repository-name
+6. Place Your Trained YOLO Model:
+   - Save your trained YOLOv8 model (e.g., best.pt) in the project folder, or update the path in the code:
+   - model = YOLO(r"C:\path\to\your\best.pt")
+7. Prepare Your Battle Video:
+   - Add your Beyblade battle video. Ensure the path is correct
+   - video_path = r"C:\path\to\your\beyblade_battle.mp4"
+8. Set Up Your Telegram Bot:
+   - Create a Telegram bot using BotFather and get your API token.
+   - Update the script with your token and chat ID:
+   - TELEGRAM_API_TOKEN = 'your-telegram-bot-token'
+   - CHAT_ID = 'your-chat-id'
+   - *using env to secure your API
+## ▶️ Running the Script
+Once everything is set up:
+1. Open Terminal:
+   Open your terminal (or command prompt) in the project folder.
+2. Run the Script:
+   Start the Beyblade battle analysis:
+   python beyblade_battle_tracker.py
+3. Enjoy the Show! 🎉
+   - The script will process the video, track Beyblades, detect collisions, and determine the winner and loser.
+   - Results, including a summary, images, and a CSV file, will be sent to your Telegram chat automatically.
+##📊 What You Get
+- Results in Telegram: You'll receive:
+  - A battle summary message 📜
+  - Images of the winner 🏆 and loser ❌
+  - The battle data in a CSV file 📈
+- Local Files: A CSV file (battle_result.csv) and images will be saved in the project folder.
+
