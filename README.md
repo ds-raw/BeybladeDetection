@@ -24,7 +24,7 @@ This Python script is designed to analyze Beyblade battles from a video using th
 - Battle Outcome Detection: Determines the winner and saves all relevant information 🏅.
 
 ## 🛠️ Logic Behind Detecting a Stopped Beyblade 🔍
-To determine whether a Beyblade has stopped spinning, the script employs a technique that involves comparing consecutive frames from the video. Here’s how it works step by step:
+To determine whether a Beyblade has stopped spinning, the script employs a technique that involves comparing consecutive frames from the video (Motion Detection using Frame Differencing.). Here’s how it works step by step:
 
 1. Capture Video Frames 🎥:
    The video is processed frame by frame, allowing the model to analyze the position and status of the Beyblades in real-time.
