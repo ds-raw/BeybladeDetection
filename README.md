@@ -20,30 +20,31 @@ This Python script is designed to analyze Beyblade battles from a video using th
 - Object Detection with YOLOv8: Automatically detects Beyblades in real-time 🎯.
 - Collision Detection: Counts the number of collisions during the battle ⚔️.
 - Spin Status Analysis: Detects the spinning and stopping of Beyblades by comparing video frames 🔍.
+- Multi-Object Tracking with BoT-SORT: Tracks each Beyblade's movement throughout the battle and maintains their unique identities using BoT-SORT, a tracker combining bounding box overlap with ReID (Re Identification) features for consistent tracking across frames 🔄.
 - Telegram Bot Notifications: Sends results, images, and CSV files directly to your Telegram 📩.
 - Battle Outcome Detection: Determines the winner and saves all relevant information 🏅.
 
 ## 🛠️ Logic Behind Detecting a Stopped Beyblade 🔍
-To determine whether a Beyblade has stopped spinning, the script employs a technique that involves comparing consecutive frames from the video (Motion Detection using Frame Differencing.). Here’s how it works step by step:
-
-1. Capture Video Frames 🎥:
+To determine whether a Beyblade has stopped spinning, the script employs a technique that involves comparing consecutive frames from the video (Motion Detection using Frame Differencing) and uses BoT-SORT to track individual Beyblades. Here’s how it works step by step:
+1. Multi-Object Tracking with BoT-SORT: The script uses BoT-SORT to track each detected Beyblade across frames, leveraging both bounding box overlap and Re-Identification (ReID) features to maintain consistent identities, even in cases of occlusion or fast movement.
+2. Capture Video Frames 🎥:
    The video is processed frame by frame, allowing the model to analyze the position and status of the Beyblades in real-time.
-2. Convert Frames to Grayscale ⚪:
+3. Convert Frames to Grayscale ⚪:
    - For each frame, the script converts the image from color to grayscale.
    - This simplifies the comparison process by reducing the amount of information that needs to be analyzed.
-3. Calculate Frame Differences ➖:
+4. Calculate Frame Differences ➖:
    - The script calculates the absolute difference between the current frame and the previous frame using the OpenCV function cv2.absdiff().
    - This highlights areas where changes occur, such as movement or lack of movement.
-4. Analyze the Beyblade Regions 📏:
+5. Analyze the Beyblade Regions 📏:
    - For each detected Beyblade, the script identifies its bounding box (the area surrounding it). It focuses on this region in the difference image to assess movement.
    - The bounding box coordinates are used to extract the relevant area from the difference image.
-5. Compute the Mean Difference 📊:
+6. Compute the Mean Difference 📊:
    - The script calculates the mean pixel intensity difference within the Beyblade’s bounding box in the difference image. A low mean difference indicates that there has been little to no movement in that region.
-6. Set a Threshold for Movement ⚖️:
+7. Set a Threshold for Movement ⚖️:
    A predefined threshold (e.g., frame_diff_threshold) is set to determine what constitutes significant movement. If the mean difference is below this threshold, the Beyblade is considered to have stopped spinning.
-7. Update Spin Status 🔄:
+8. Update Spin Status 🔄:
    Based on the analysis, the Beyblade's status is updated to either "spinning" or "stopped." This status is maintained throughout the video processing loop.
-8. Trigger Outcome Logic 🏁:
+9. Trigger Outcome Logic 🏁:
    Once a Beyblade is detected as "stopped" and there is only one other Beyblade still "spinning," the script concludes the battle and identifies the winner and loser.
 
 
