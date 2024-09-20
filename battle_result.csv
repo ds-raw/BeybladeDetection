@@ -1,0 +1,2 @@
+battle_time,total_video_time,winner,loser,reason,collisions,detected_classes
+0,17.533333333333335,the winner.jpg,the loser.jpg,Opponent stopped spinning,916,{'Beyblade': 2}
