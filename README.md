@@ -16,20 +16,20 @@ This Python script is designed to analyze Beyblade battles from a video using th
 6. Telegram Bot Integration 🤖:
    After the battle, the results (including a CSV file, summary, and images of the winner and loser) are automatically sent via a Telegram bot to a specified chat.
 
-# ✨ Key Features:
+## ✨ Key Features:
 - Object Detection with YOLOv8: Automatically detects Beyblades in real-time 🎯.
 - Collision Detection: Counts the number of collisions during the battle ⚔️.
 - Spin Status Analysis: Detects the spinning and stopping of Beyblades by comparing video frames 🔍.
 - Telegram Bot Notifications: Sends results, images, and CSV files directly to your Telegram 📩.
 - Battle Outcome Detection: Determines the winner and saves all relevant information 🏅.
 
-# 🚀 How to Access and Run the Beyblade Battle Tracker 🌀
+## 🚀 How to Access and Run the Beyblade Battle Tracker 🌀
 🛠️ Prerequisites
 Before diving in, make sure you have the following installed:
 - Python 3.x (Get it here)
 - Required libraries (install them via terminal) "pip install opencv-python ultralytics numpy pandas python-telegram-bot"
 
-# 📥 Setup Guide
+## 📥 Setup Guide
 1. Upload Your Dataset to Roboflow 📤:
    Create a Roboflow account and log in.
 2. Upload your Beyblade images or video frames to create a new project.
