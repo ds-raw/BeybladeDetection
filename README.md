@@ -1,23 +1,26 @@
-# Beyblade Battle Detection
-This Python script utilizes the YOLOv8 object detection model to track Beyblade battles from a video, analyze collisions, and determine the winner and loser based on spin detection. The process begins by loading the trained YOLOv8 model and a video file, where Beyblade movements are detected frame-by-frame. The model identifies the Beyblade objects, calculates spin status by comparing frame differences, and tracks collisions using bounding box overlap. Once one Beyblade stops spinning, the script identifies the winner, stores relevant information (such as battle duration, detected collisions, and detected object classes), and saves the final frames of the winner and loser. Results are logged in a CSV file for further analysis.
+# 🌀 Beyblade Battle Tracker with YOLOv8 and Telegram Integration 🚀
 
-Additionally, the script integrates with a Telegram bot, sending battle results, including a summary, images of the winner, loser, and the last condition, as well as the CSV file. The script employs asynchronous communication with Telegram, ensuring that all results are sent after the battle analysis completes.
+This Python script is designed to analyze Beyblade battles from a video using the YOLOv8 object detection model. It tracks the movements of the Beyblades, detects collisions, and determines the winner and loser based on their spinning status. Here’s how it works:
 
-Key features include:
+🛠️ How It Works:
+Load the YOLOv8 Model 🧠:
 
-Object detection with YOLOv8: Identifies Beyblades and tracks their status (spinning or stopped).
-Collision detection: Tracks the number of Beyblade collisions during the battle using bounding box overlap.
-Spin status analysis: Detects the stopping of Beyblades by calculating frame differences between consecutive video frames.
-Telegram integration: Automatically sends battle results, images, and CSV files via a Telegram bot.
-Battle outcome detection: Determines the winner when one Beyblade stops spinning.
-The script effectively combines object detection, video processing, and asynchronous messaging for a comprehensive Beyblade battle tracking system.
+The trained model is used to identify Beyblades in the video, detecting their movements frame-by-frame.
+Track Beyblades in Real-Time 📹:
 
-How to Access and Run the Code
-Prerequisites
-Before running the code, ensure you have the following dependencies installed:
+The script tracks multiple Beyblades, analyzing their position and calculating their spin status.
+Collision Detection ⚡:
 
-Python 3.x
-OpenCV (pip install opencv-python)
+The script detects Beyblade collisions using bounding box overlap and counts the number of times they collide.
+Spin Status 🔄:
+
+The Beyblade's spinning status is determined by calculating the difference between consecutive video frames. When one Beyblade stops spinning, the script identifies it as the loser.
+Battle Outcome 🏆:
+
+The battle ends when one Beyblade stops spinning. The script captures the moment, stores battle details (winner, loser, and duration), and saves images of the final result.
+Telegram Bot Integration 🤖:
+
+After the battle, the results (including a CSV file, summary, and images of the winner and loser) are automatically sent via a Telegram bot to a specified chat.
 Ultralytics YOLOv8 library (pip install ultralytics)
 NumPy (pip install numpy)
 Pandas (pip install pandas)
