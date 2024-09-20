@@ -2,7 +2,7 @@
 
 This Python script is designed to analyze Beyblade battles from a video using the YOLOv8 object detection model. It tracks the movements of the Beyblades, detects collisions, and determines the winner and loser based on their spinning status. Here’s how it works:
 
-# 🛠️ How It Works:
+## 🛠️ How It Works:
 1. Load the YOLOv8 Model 🧠:
    The trained model is used to identify Beyblades in the video, detecting their movements frame-by-frame.
 2. Track Beyblades in Real-Time 📹:
