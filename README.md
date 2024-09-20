@@ -92,7 +92,7 @@ Once everything is set up:
 3. Enjoy the Show! 🎉
    - The script will process the video, track Beyblades, detect collisions, and determine the winner and loser.
    - Results, including a summary, images, and a CSV file, will be sent to your Telegram chat automatically.
-##📊 What You Get
+## 📊 What You Get
 - Results in Telegram: You'll receive:
   - A battle summary message 📜
   - Images of the winner 🏆 and loser ❌
