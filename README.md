@@ -19,7 +19,7 @@ This Python script is designed to analyze Beyblade battles from a video using th
 ### Video Link
 - Original Video: https://www.youtube.com/watch?v=CIfr5618vy4&list=LL&index=4
 - Input and Output: https://drive.google.com/drive/folders/1zOgJol-a_ubczUyk778LkNgznrWZ601m
-- 
+  
 ## ✨ Key Features:
 - Object Detection with YOLOv8: Automatically detects Beyblades in real-time 🎯.
 - Collision Detection: Counts the number of collisions during the battle ⚔️.
