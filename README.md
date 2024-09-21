@@ -128,3 +128,5 @@ Once everything is set up:
      - mAP50: 0.876
      - mAP50-95: 0.500
 
+### Video Link
+- Input and Output: https://drive.google.com/drive/folders/1zOgJol-a_ubczUyk778LkNgznrWZ601m
