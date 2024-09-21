@@ -16,6 +16,10 @@ This Python script is designed to analyze Beyblade battles from a video using th
 6. Telegram Bot Integration 🤖:
    After the battle, the results (including a CSV file, summary, and images of the winner and loser) are automatically sent via a Telegram bot to a specified chat.
    
+### Video Link
+- Original Video: https://www.youtube.com/watch?v=CIfr5618vy4&list=LL&index=4
+- Input and Output: https://drive.google.com/drive/folders/1zOgJol-a_ubczUyk778LkNgznrWZ601m
+- 
 ## ✨ Key Features:
 - Object Detection with YOLOv8: Automatically detects Beyblades in real-time 🎯.
 - Collision Detection: Counts the number of collisions during the battle ⚔️.
@@ -128,5 +132,4 @@ Once everything is set up:
      - mAP50: 0.876
      - mAP50-95: 0.500
 
-### Video Link
-- Input and Output: https://drive.google.com/drive/folders/1zOgJol-a_ubczUyk778LkNgznrWZ601m
+
